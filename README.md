@@ -8,6 +8,9 @@ The 2 lasers are positioned approximately 10 cm apart, and are pointing at the 2
 
 ![Room Light diagram](https://github.com/borgworld/Room_Light/blob/master/RoomLight-diagram.png "Room Light diagram")
 
+### Light sensor board schematic
+![Light sensor board schematic](https://github.com/borgworld/Room_Light/blob/master/photos/light_sensor_board.png "Light sensor board schematic")
+
 # Some photos from the project
 
 ### Light sensor board
