@@ -93,7 +93,6 @@ def initialize_flash_led():
 def sensor_status(sensor_number):
     light_value = ADC.read(sensor_number)
     #print(sensor_number, light_value)
-#    if light_value > THRESHOLD:
     if light_value < THRESHOLD:
         return BLOCKED
     else:
@@ -130,15 +129,15 @@ def person_left():
 def switch_light(on_or_off):
     if on_or_off == LIGHT_ON:
         try:
-            #api(lights[0].light_control.set_dimmer(254))
-            print('Light on')
+            api(lights[0].light_control.set_dimmer(254))
+            #print('Light on')
         except:
             print('Failed to switch light on')
 #        GPIO.output(LEDOUT, True)
     if on_or_off == LIGHT_OFF:
         try:
-            #api(lights[0].light_control.set_dimmer(0))
-            print('Light off')
+            api(lights[0].light_control.set_dimmer(0))
+            #print('Light off')
         except:
             print('Failed to switch light off')
 #        GPIO.output(LEDOUT, False)
@@ -158,7 +157,7 @@ def setup():
     GPIO.setup(LEDOUT, GPIO.OUT)
     GPIO.setup(PUSH_BUTTON, GPIO.IN, pull_up_down=GPIO.PUD_UP)
     reset_system()
-    #initialize_tradlos()
+    initialize_tradlos()
     initialize_flash_led()
 
 def loop():
